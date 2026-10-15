@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111c35;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --navy: #14213f;
+  --blue: #2864f0;
+  --muted: #77839a;
+  --border: #d8dfeb;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+.login-layout {
+  display: grid;
+  grid-template-columns: 53.15% 46.85%;
+  min-height: 100vh;
+}
+
+.brand-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 31px clamp(32px, 6.15vw, 96px) 14px;
+  color: #fff;
+  background: var(--navy);
+}
+.brand-panel::before,
+.brand-panel::after {
+  position: absolute;
+  content: "";
+  border: 1px solid rgba(73, 112, 185, .25);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.brand-panel::before {
+  width: 538px; height: 538px;
+  right: -200px; top: 117px;
+}
+.brand-panel::after {
+  width: 358px; height: 358px;
+  right: -82px; top: 207px;
+}
+.brand-header, .hero-content, .brand-footer { position: relative; z-index: 1; }
+.brand { display: inline-flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; font-size: 17px; font-weight: 700; letter-spacing: -.5px; }
+.brand-mark, .stat-icon {
+  display: grid; place-items: center;
+  background: #2864f0; border-radius: 9px;
+}
+.brand-mark { width: 34px; height: 34px; }
+.brand-mark svg, .stat-icon svg { width: 23px; height: 23px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.hero-content { width: 100%; max-width: 520px; margin: auto 0; padding: 58px 0 52px; }
+.eyebrow-icon { width: 17px; height: 17px; margin-bottom: 9px; color: #8fb6ff; }
+.eyebrow-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.eyebrow { margin: 0 0 20px; color: #8bb2ff; font-size: 10px; font-weight: 700; letter-spacing: 1.1px; }
+h1 { margin: 0; font-size: clamp(36px, 3.75vw, 58px); line-height: 1.08; font-weight: 500; letter-spacing: -2.2px; }
+.hero-description { max-width: 440px; margin: 20px 0 33px; color: #bdc8dc; font-size: 13px; line-height: 1.8; }
+.stat-card { display: flex; align-items: center; width: min(310px, 100%); min-height: 64px; padding: 12px; gap: 11px; border: 1px solid rgba(180, 197, 226, .18); border-radius: 12px; background: rgba(255,255,255,.085); }
+.stat-icon { flex: 0 0 38px; width: 38px; height: 38px; background: #244b9a; }
+.stat-copy { display: flex; flex-direction: column; gap: 3px; }
+.stat-label { color: #bdc8dc; font-size: 9px; }
+.stat-copy strong { font-size: 17px; line-height: 1.2; }
+.stat-growth { margin-left: auto; align-self: flex-start; padding-top: 6px; color: #3de0ae; font-size: 9px; font-weight: 700; }
+.brand-footer { color: #7185ad; font-size: 9px; }
+
+.form-panel { display: flex; align-items: center; justify-content: center; padding: 40px clamp(28px, 5vw, 80px); background: #fff; }
+.login-card { width: 100%; max-width: 370px; }
+.welcome-label { margin: 0 0 14px; color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: 1.1px; }
+.login-card h2 { margin: 0 0 8px; color: #17233c; font-size: 24px; line-height: 1.3; font-weight: 500; letter-spacing: -.7px; }
+.form-intro { margin: 0 0 30px; color: #7d8799; font-size: 11px; line-height: 1.7; }
+.form-field { margin-bottom: 16px; }
+.form-field > label, .dialog-content > label { display: block; margin-bottom: 7px; color: #26344d; font-size: 9px; font-weight: 500; }
+.form-field input, .dialog-content input { width: 100%; height: 37px; padding: 0 11px; border: 1px solid var(--border); border-radius: 8px; outline: none; background: #fff; color: #15213a; font-size: 11px; transition: border-color .2s, box-shadow .2s; }
+.form-field input:focus, .dialog-content input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(40,100,240,.11); }
+.password-input-wrap { position: relative; }
+.password-input-wrap input { padding-right: 42px; }
+.visibility-toggle { position: absolute; top: 0; right: 0; display: grid; place-items: center; width: 40px; height: 37px; padding: 0; border: 0; background: transparent; color: #6e7a91; }
+.visibility-toggle svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.form-options { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 4px 0 31px; }
+.remember-option { display: inline-flex; align-items: center; gap: 7px; color: #4f5d75; font-size: 9px; cursor: pointer; }
+.remember-option input { width: 14px; height: 14px; margin: 0; accent-color: var(--blue); cursor: pointer; }
+.text-button { padding: 4px 0; border: 0; background: none; color: var(--blue); font-size: 10px; font-weight: 600; }
+.text-button:hover { text-decoration: underline; }
+.submit-button { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 37px; border: 0; border-radius: 8px; background: var(--blue); color: #fff; font-size: 10px; font-weight: 700; box-shadow: 0 3px 7px rgba(40,100,240,.22); transition: background .2s, transform .2s, box-shadow .2s; }
+.submit-button svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.submit-button:hover { background: #1955dd; box-shadow: 0 5px 12px rgba(40,100,240,.27); }
+.submit-button:active { transform: translateY(1px); }
+.demo-note { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 13px 0 0; color: #8994a7; font-size: 8px; }
+.demo-note svg { width: 15px; height: 15px; fill: none; stroke: #6d7d98; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.field-error { display: block; min-height: 0; margin-top: 5px; color: #d93c4c; font-size: 10px; }
+.field-error:not(:empty) { min-height: 12px; }
+.form-message { margin: 10px 0 0; color: #16835e; font-size: 11px; line-height: 1.5; text-align: center; }
+.form-message.error, .dialog-message.error { color: #d93c4c; }
+.help-dialog { width: min(420px, calc(100% - 32px)); padding: 0; border: 1px solid #e3e8f1; border-radius: 16px; color: #17233c; box-shadow: 0 20px 70px rgba(17,28,53,.22); }
+.help-dialog::backdrop { background: rgba(12, 22, 43, .55); backdrop-filter: blur(3px); }
+.dialog-content { position: relative; padding: 30px; }
+.dialog-close { position: absolute; top: 12px; right: 15px; border: 0; background: none; color: #68748a; font-size: 25px; }
+.dialog-icon { display: grid; place-items: center; width: 34px; height: 34px; margin-bottom: 16px; border-radius: 10px; background: #edf3ff; color: var(--blue); font-weight: 700; }
+.dialog-content h2 { margin: 0 0 8px; font-size: 20px; }
+.dialog-content p { color: #748096; font-size: 12px; line-height: 1.65; }
+.dialog-content > label { margin-top: 20px; font-size: 11px; }
+.dialog-content .submit-button { margin-top: 16px; }
+.dialog-message { margin-bottom: 0; }
+
+@media (min-width: 1500px) {
+  .brand-panel { padding-left: max(96px, calc((100vw - 1310px) / 2)); }
+}
+@media (max-width: 900px) {
+  .login-layout { grid-template-columns: 1fr 1fr; }
+  .brand-panel { padding-left: 34px; padding-right: 34px; }
+  .hero-content { padding-top: 40px; }
+  h1 { font-size: clamp(34px, 4.4vw, 46px); letter-spacing: -1.5px; }
+  .form-panel { padding: 35px 28px; }
+}
+@media (max-width: 640px) {
+  .login-layout { grid-template-columns: 1fr; }
+  .brand-panel { min-height: auto; padding: 22px 24px 18px; }
+  .brand-mark { width: 31px; height: 31px; }
+  .hero-content { margin: 0; padding: 50px 0 28px; }
+  .eyebrow { margin-bottom: 14px; }
+  h1 { font-size: clamp(35px, 9vw, 48px); line-height: 1.1; }
+  .hero-description { margin: 15px 0 22px; font-size: 12px; }
+  .brand-panel::before { width: 340px; height: 340px; right: -200px; top: 80px; }
+  .brand-panel::after { width: 240px; height: 240px; right: -130px; top: 130px; }
+  .brand-footer { font-size: 8px; }
+  .form-panel { padding: 45px 24px 52px; }
+  .login-card { max-width: 420px; }
+  .form-intro { margin-bottom: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

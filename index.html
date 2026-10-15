@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="InvoicePilot - Quản lý hóa đơn và công nợ thông minh.">
+  <title>Đăng nhập | InvoicePilot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="login-layout">
+    <section class="brand-panel" aria-labelledby="hero-title">
+      <header class="brand-header">
+        <a class="brand" href="#" aria-label="InvoicePilot - Trang chủ">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 16.5 8.2 11l4.1 3.5L20.5 6.5M15.5 6.5h5v5"/></svg>
+          </span>
+          <span>InvoicePilot</span>
+        </a>
+      </header>
+
+      <div class="hero-content">
+        <div class="eyebrow-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3Z"/><path d="m19 15 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"/></svg>
+        </div>
+        <p class="eyebrow">Tài chính thông minh hơn</p>
+        <h1 id="hero-title">Kiểm soát công nợ.<br>Tăng tốc dòng tiền.</h1>
+        <p class="hero-description">Biến dữ liệu hóa đơn thành quyết định rõ ràng với một nền tảng quản lý phải thu thống nhất.</p>
+
+        <article class="stat-card" aria-label="Tỷ lệ thu đúng hạn 92,4 phần trăm, tăng 8,2 phần trăm">
+          <span class="stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 16.5 8.2 11l4.1 3.5L20.5 6.5M15.5 6.5h5v5"/></svg>
+          </span>
+          <div class="stat-copy">
+            <span class="stat-label">Tỷ lệ thu đúng hạn</span>
+            <strong>92,4%</strong>
+          </div>
+          <span class="stat-growth">↗ 8,2%</span>
+        </article>
+      </div>
+
+      <footer class="brand-footer">© 2025 InvoicePilot. CSE122 Web Application Project.</footer>
+    </section>
+
+    <section class="form-panel" aria-labelledby="login-title">
+      <div class="login-card">
+        <p class="welcome-label">Chào mừng trở lại</p>
+        <h2 id="login-title">Đăng nhập tài khoản</h2>
+        <p class="form-intro">Truy cập không gian quản lý tài chính của bạn.</p>
+
+        <form id="login-form" novalidate>
+          <div class="form-field">
+            <label for="email">Email công việc</label>
+            <input id="email" name="email" type="email" autocomplete="username"
+                   value="ketoan@invoicepilot.vn" required>
+            <small class="field-error" id="email-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-field password-field">
+            <label for="password">Mật khẩu</label>
+            <div class="password-input-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password"
+                     value="Invoice123" required minlength="6">
+              <button class="visibility-toggle" type="button" id="toggle-password"
+                      aria-label="Hiện mật khẩu" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.3-6 9.5-6 9.5 6 9.5 6-3.3 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.6"/></svg>
+              </button>
+            </div>
+            <small class="field-error" id="password-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-option" for="remember">
+              <input id="remember" name="remember" type="checkbox" checked>
+              <span>Ghi nhớ đăng nhập</span>
+            </label>
+            <button class="text-button" id="forgot-password" type="button">Quên mật khẩu?</button>
+          </div>
+
+          <button class="submit-button" type="submit">
+            <span>Đăng nhập</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+          </button>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="demo-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg>
+          Tài khoản demo đã được điền sẵn
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="help-dialog" id="help-dialog" aria-labelledby="help-title">
+    <form method="dialog" class="dialog-content">
+      <button class="dialog-close" aria-label="Đóng cửa sổ">×</button>
+      <span class="dialog-icon" aria-hidden="true">?</span>
+      <h2 id="help-title">Khôi phục mật khẩu</h2>
+      <p>Nhập email công việc của bạn. Hướng dẫn khôi phục sẽ được gửi nếu email thuộc một tài khoản hợp lệ.</p>
+      <label for="recovery-email">Email công việc</label>
+      <input id="recovery-email" type="email" placeholder="ban@congty.vn" required>
+      <button class="submit-button" id="send-recovery" type="button">Gửi hướng dẫn</button>
+      <p class="dialog-message" id="recovery-message" aria-live="polite"></p>
+    </form>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
