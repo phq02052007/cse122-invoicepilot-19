@@ -46,10 +46,10 @@ cse122-invoicepilot-19/
 ```
 
 ## 7. Link Figma
-[[Điền link thiết kế Figma tại đây]](https://www.figma.com/make/jZz5kYyEk4Er2D2ZsgHjqC/Professional-Hotel-Website?p=f&t=i3046bUWBiqbJ5IS-0)
+https://www.figma.com/make/jZz5kYyEk4Er2D2ZsgHjqC/Professional-Hotel-Website?p=f&t=i3046bUWBiqbJ5IS-0)
 
 ## 8. Link video demo
-[Điền link video demo tại đây]
+
 
 ## 9. Link GitHub
 https://github.com/phq02052007/cse122-invoicepilot-19
